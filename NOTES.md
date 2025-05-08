@@ -1,0 +1,8 @@
+- move_relative(-10, unit='deg') makes it go in the opposite direction with a negative sign
+- move_absolute(40, unit='deg') makes it go to a specified angle. 
+- To daisy chain, make sure each device is connected to each other with the connector cables. Then connect the first device to power. They will share this power source. Then connect a device to computer via USB
+- print(axis.is_homed()) returns True if the device is homed. This does not necessarily mean the position is at 0, it just means it has a homed reference position
+- The heat dissapator does get hot when given commands
+- print(axis.is_busy()) returns true or false if the stage is executing a command. With regular commands like move_relative(-10, unit='deg'), it will finish moving before moving to this next line
+- Parking the axis before turning off makes it so that you can turn it on and unpark it and move it without having to home again!
+- print(axis.get_position(unit='deg')) returns the position in degrees
